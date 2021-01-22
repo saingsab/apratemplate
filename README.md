@@ -9,5 +9,6 @@ Feature:
 - [ ] Compile-time Safety
 - [ ] Database Migrations
 - [ ] Logging Crate
-- [ ] tracing's Span
+- [ ] Tracing's Span
 - [ ] Production Deployment Guide.
+- [x] Travis CI audit package at push
