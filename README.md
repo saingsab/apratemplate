@@ -5,7 +5,7 @@
 TLTD
 Creating new project will take more time into configure the basic need of package/crate. In order to save time I create a template wich is ready for production deployment. This template accompany with following feature: 
 
-- [ ] Actix-web with actix_rt.
+- [x] Actix-web with actix_rt.
 - [ ] tests/health_check.
 - [ ] Database Crate (sqlx).
 - [ ] Compile-time Safety.
