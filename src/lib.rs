@@ -1,5 +1,5 @@
-use actix_web::{web, App, HttpResponse, HttpServer};
 use actix_web::dev::Server;
+use actix_web::{web, App, HttpResponse, HttpServer};
 use std::net::TcpListener;
 
 async fn health_check() -> HttpResponse {
@@ -7,15 +7,14 @@ async fn health_check() -> HttpResponse {
 }
 
 pub fn run(listener: TcpListener) -> Result<Server, std::io::Error> {
-    let server = HttpServer::new(|| {
-        App::new()
-        .route("/health_check", web::get().to(health_check))
-    })        
-    .listen(listener)?        
-    .run();
+    let server = HttpServer::new(|| App::new().route("/health_check", web::get().to(health_check)))
+        .listen(listener)?
+        .run();
     // .await
     // No .await here!
     Ok(server)
 }
 
-
+pub mod configuration;
+pub mod routes;
+pub mod startup;
