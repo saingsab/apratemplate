@@ -2,10 +2,12 @@ use asrtemplate::configuration::get_configuration;
 use asrtemplate::run;
 use sqlx::PgPool;
 // use sqlx::{Connection, PgConnection};
+use log::info;
 use std::net::TcpListener;
 
 #[actix_rt::main]
 async fn main() -> std::io::Result<()> {
+    info!("starting service");
     // Panic if we can't read configuration
     let configuration = get_configuration().expect("Failed to read configuration.");
     let _connection_pool = PgPool::connect(&configuration.database.connection_string())
