@@ -7,9 +7,9 @@ Creating new project will take more time into configure the basic need of packag
 
 - [x] Actix-web with actix_rt.
 - [ ] tests/health_check.
-- [ ] Database Crate (sqlx).
-- [ ] Compile-time Safety.
-- [ ] Database Migrations.
+- [x] Database Crate (sqlx).
+- [x] Compile-time Safety.
+- [x] Database Migrations.
 - [ ] Logging Crate.
 - [ ] Tracing's Span.
 - [ ] Production Deployment Guide.
