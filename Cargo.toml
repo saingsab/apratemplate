@@ -19,6 +19,8 @@ actix-web = "3.3.2"
 tokio = "1.0.2"
 config = "0.10.1"
 serde = "1.0.123"
+uuid = { version = "0.8.1", features = ["v4"] }
+chrono = "0.4.15"
 
 [dependencies.sqlx]
 version = "0.4.1"
