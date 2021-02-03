@@ -28,3 +28,20 @@ services:
       - web
     depends_on:
       - db
+  # apisrv:
+  #   image: rust
+  #   restart: always
+  #   environment:
+  #     - SQLX_OFFLINE: "true"
+  #   depends_on: 
+  #     - db
+  #   ports:
+  #     - 8800:8800
+  #   volumes:
+  #     - ./:/usr/src/app
+  #   networks:
+  #     - web
+  #     - internal
+  #   working_dir: /usr/src/app
+  #   command: >
+  #     sh -c "cargo build --release && ./target/release/asrtemplate"
